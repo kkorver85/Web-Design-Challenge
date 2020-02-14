@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Bootstrap Components</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+  <style>
+	  
+	  body {
+  		background-color: #e1e8ea;
+	  }
+
+	  h3 {
+		  color: #27d6d6;
+	  }
+
+	  .inner {
+		background-color: white;
+		padding: 20px;
+	  }
+
+	  .navbox {
+		background-color: white;
+	  }
+
+	p {
+	  font-size: 16px;
+	}
+
+    .logo, .logo:hover, .logo:active {
+		background-color: #27d6d6;
+		color: white;
+		font-style: bold;
+	  }
+
+    .selected_img {
+        border: 2px solid #27d6d6;
+    }
+
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-default">
+	<div class="container-fluid navbox">
+	  <!-- Brand and toggle get grouped for better mobile display -->
+	  <div class="navbar-header">
+		<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+		<span class="sr-only">Toggle navigation</span>
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+	  </button>
+		<a class="navbar-brand logo" href="index.html">Latitude</a>
+	  </div>
+
+	  <!-- Collect the nav links, forms, and other content for toggling -->
+	  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		<ul class="nav navbar-nav">
+		</ul>
+		<ul class="nav navbar-nav navbar-right">
+		  <li class="dropdown">
+			<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Plots <span class="caret"></span></a>
+			<ul class="dropdown-menu">
+				<li><a href="visualization_temp.html">Max Temperature</a></li>
+				<li><a href="visualization_humidity.html">Humidity</a></li>
+				<li><a href="visualization_cloudiness.html">Cloudiness</a></li>
+				<li><a href="visualization_wind.html">Wind Speed</a></li>
+			</ul>
+		  </li>
+		  <li><a href="comparison.html">Comparison</a></li>
+		  <li><a href="data.html">Data</a></li>
+		</ul>
+	  </div>
+	  <!-- /.navbar-collapse -->
+	</div>
+	<!-- /.container-fluid -->
+  </nav>
+
+  <div class="container">
+	<div class="row">
+	  <div class="col-md-8 col-sm-12 col-xs-12">
+		<div class="inner">
+		  <h3>Humidity</h3>
+		  <hr />
+          <img src="visualizations/Fig2.png" width="90%">
+		  <p> There is no clear correlation between latitude and humidity. At most latitudes, you can find cities with widely varying humidity. This means
+              that other factors like proximity to water bodies and rainfall received per annum might be more important than latitude in determining the
+              humidity of a place. It's surprising that a lot of places have 100% humidity.
+		  </p>
+		</div>
+	  </div>
+	  <div class="col-md-4 col-sm-12 col-xs-12">
+        <div class="inner" style="height: auto;">
+            <h3>Visualizations</h3>
+            <hr />
+            <a href="visualization_temp.html"><img src="visualizations/Fig1.png" width="150px" height="150px"></a>
+            <a href="visualization_humidity.html"><img src="visualizations/Fig2.png" width="150px" height="150px" class="selected_img"></a>
+            <a href="visualization_cloudiness.html"><img src="visualizations/Fig3.png" width="150px" height="150px"></a>
+            <a href="visualization_wind.html"><img src="visualizations/Fig4.png" width="150px" height="150px"></a>
+        </div>
+      </div>
+	</div>
+  </div>
+
+
+
+</body>
+
+</html>
